@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>欢迎来到sheldon的博客</title>
+    <link>https://youngsheldon.github.io/</link>
+    <description>Recent content on 欢迎来到sheldon的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 16 Sep 2019 16:51:23 +0800</lastBuildDate>
+    
+        <atom:link href="https://youngsheldon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于我</title>
+      <link>https://youngsheldon.github.io/about/</link>
+      <pubDate>Sun, 15 Sep 2019 21:38:52 +0800</pubDate>
+      
+      <guid>https://youngsheldon.github.io/about/</guid>
+      
+        <description>&lt;p&gt;专注于cpp、go、python后台开发，业余开源硬件爱好者。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>你好，世界！</title>
+      <link>https://youngsheldon.github.io/post/helloword/</link>
+      <pubDate>Mon, 16 Sep 2019 16:51:23 +0800</pubDate>
+      
+      <guid>https://youngsheldon.github.io/post/helloword/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;哈比是最辣鸡的&#34;&gt;哈比是最辣鸡的&lt;/h2&gt;
+
+
+
+
+&lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
+        &lt;div class=&#34;box&#34;&gt;
+          &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+            &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://youngsheldon.github.io//image//1.jpg&#39;);&#34; &gt;
+              &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://youngsheldon.github.io//image//1.jpg&#34; alt=&#34;1st&#34; /&gt;
+            &lt;/div&gt;
+            &lt;figcaption&gt;
+              &lt;p&gt;1st&lt;/p&gt;
+            &lt;/figcaption&gt;
+            &lt;a href=&#34;https://youngsheldon.github.io//image//1.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;box&#34;&gt;
+          &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+            &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://youngsheldon.github.io//image//2.jpg&#39;);&#34; &gt;
+              &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://youngsheldon.github.io//image//2.jpg&#34; alt=&#34;2nd&#34; /&gt;
+            &lt;/div&gt;
+            &lt;figcaption&gt;
+              &lt;p&gt;2nd&lt;/p&gt;
+            &lt;/figcaption&gt;
+            &lt;a href=&#34;https://youngsheldon.github.io//image//2.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;box&#34;&gt;
+          &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+            &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://youngsheldon.github.io//image//3.jpg&#39;);&#34; &gt;
+              &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://youngsheldon.github.io//image//3.jpg&#34; alt=&#34;3rd&#34; /&gt;
+            &lt;/div&gt;
+            &lt;figcaption&gt;
+              &lt;p&gt;3rd&lt;/p&gt;
+            &lt;/figcaption&gt;
+            &lt;a href=&#34;https://youngsheldon.github.io//image//3.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+&lt;/div&gt;
+
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

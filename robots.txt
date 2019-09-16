@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://youngsheldon.github.io/sitemap.xml
