@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>你好，世界！ - 欢迎来到sheldon的博客</title>
+  <title>通过SD卡配置树莓派wifi，并通过ssh访问 - 欢迎来到sheldon的博客</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="sheldon" />
-  <meta name="description" content="哈比是最辣鸡的 1st 2nd 3rd" />
+  <meta name="description" content="最近搬家，新房东的wifi是公用的，不是我自己拉网线开的路由器。当我想通过ssh访问树莓派的时候就出现了2个蛋疼的问题： 树莓派怎么连上新wi" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -35,7 +35,7 @@
 <meta name="generator" content="Hugo 0.55.5" />
 
 
-<link rel="canonical" href="https://youngsheldon.github.io/post/helloword/" />
+<link rel="canonical" href="https://youngsheldon.github.io/post/ssh%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE/" />
 
 
 
@@ -57,27 +57,27 @@
 
 
 
-<meta property="og:title" content="你好，世界！" />
-<meta property="og:description" content="哈比是最辣鸡的 1st 2nd 3rd" />
+<meta property="og:title" content="通过SD卡配置树莓派wifi，并通过ssh访问" />
+<meta property="og:description" content="最近搬家，新房东的wifi是公用的，不是我自己拉网线开的路由器。当我想通过ssh访问树莓派的时候就出现了2个蛋疼的问题： 树莓派怎么连上新wi" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://youngsheldon.github.io/post/helloword/" />
-<meta property="article:published_time" content="2019-09-16T16:51:23&#43;08:00"/>
-<meta property="article:modified_time" content="2019-09-16T16:51:23&#43;08:00"/>
+<meta property="og:url" content="https://youngsheldon.github.io/post/ssh%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE/" />
+<meta property="article:published_time" content="2019-09-17T09:52:23&#43;08:00"/>
+<meta property="article:modified_time" content="2019-09-17T09:52:23&#43;08:00"/>
 
-<meta itemprop="name" content="你好，世界！">
-<meta itemprop="description" content="哈比是最辣鸡的 1st 2nd 3rd">
-
-
-<meta itemprop="datePublished" content="2019-09-16T16:51:23&#43;08:00" />
-<meta itemprop="dateModified" content="2019-09-16T16:51:23&#43;08:00" />
-<meta itemprop="wordCount" content="10">
+<meta itemprop="name" content="通过SD卡配置树莓派wifi，并通过ssh访问">
+<meta itemprop="description" content="最近搬家，新房东的wifi是公用的，不是我自己拉网线开的路由器。当我想通过ssh访问树莓派的时候就出现了2个蛋疼的问题： 树莓派怎么连上新wi">
 
 
+<meta itemprop="datePublished" content="2019-09-17T09:52:23&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-17T09:52:23&#43;08:00" />
+<meta itemprop="wordCount" content="300">
 
-<meta itemprop="keywords" content="helloword," />
+
+
+<meta itemprop="keywords" content="树莓派," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="你好，世界！"/>
-<meta name="twitter:description" content="哈比是最辣鸡的 1st 2nd 3rd"/>
+<meta name="twitter:title" content="通过SD卡配置树莓派wifi，并通过ssh访问"/>
+<meta name="twitter:description" content="最近搬家，新房东的wifi是公用的，不是我自己拉网线开的路由器。当我想通过ssh访问树莓派的时候就出现了2个蛋疼的问题： 树莓派怎么连上新wi"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -297,14 +297,14 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">你好，世界！</h1>
+      <h1 class="post-title">通过SD卡配置树莓派wifi，并通过ssh访问</h1>
       
       <div class="post-meta">
-        <time datetime="2019-09-16" class="post-time">
-          2019-09-16
+        <time datetime="2019-09-17" class="post-time">
+          2019-09-17
         </time>
         <div class="post-category">
-            <a href="https://youngsheldon.github.io/categories/helloword/"> helloword </a>
+            <a href="https://youngsheldon.github.io/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"> 树莓派 </a>
             
           </div>
         
@@ -322,49 +322,28 @@
 
     
     <div class="post-content">
-      
+      <p>最近搬家，新房东的wifi是公用的，不是我自己拉网线开的路由器。当我想通过ssh访问树莓派的时候就出现了2个蛋疼的问题：</p>
 
-<h2 id="哈比是最辣鸡的">哈比是最辣鸡的</h2>
+<ol>
+<li>树莓派怎么连上新wifi？</li>
+<li>连上wifi后怎么获知树莓派的ip地址？</li>
+</ol>
 
+<p>第一问题解决的办法其实非常简单，首先在SD卡的根目录下添加一个名为 wpa_supplicant.conf的文件，然后在该文件内添加以下的内容</p>
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+network={
+  ssid=&quot;你的WIFI名&quot;
+  psk=&quot;WIFI密码&quot;
+}
+</code></pre>
 
-<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-        <div class="box">
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <div class="img" style="background-image: url('https://youngsheldon.github.io//image//1.jpg');" >
-              <img itemprop="thumbnail" src="https://youngsheldon.github.io//image//1.jpg" alt="1st" />
-            </div>
-            <figcaption>
-              <p>1st</p>
-            </figcaption>
-            <a href="https://youngsheldon.github.io//image//1.jpg" itemprop="contentUrl"></a>
-          </figure>
-        </div>
-        <div class="box">
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <div class="img" style="background-image: url('https://youngsheldon.github.io//image//2.jpg');" >
-              <img itemprop="thumbnail" src="https://youngsheldon.github.io//image//2.jpg" alt="2nd" />
-            </div>
-            <figcaption>
-              <p>2nd</p>
-            </figcaption>
-            <a href="https://youngsheldon.github.io//image//2.jpg" itemprop="contentUrl"></a>
-          </figure>
-        </div>
-        <div class="box">
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <div class="img" style="background-image: url('https://youngsheldon.github.io//image//3.jpg');" >
-              <img itemprop="thumbnail" src="https://youngsheldon.github.io//image//3.jpg" alt="3rd" />
-            </div>
-            <figcaption>
-              <p>3rd</p>
-            </figcaption>
-            <a href="https://youngsheldon.github.io//image//3.jpg" itemprop="contentUrl"></a>
-          </figure>
-        </div>
-</div>
+<p>插入SD卡启动树莓派就能直接连接到你的WIFI网络了。
+那问题来了，连上网后我们怎么看树莓派的IP呢？
+如果你的设备支持 mDNS的话可以用以下的指令来直接查看树莓派的地址：</p>
 
+<pre><code>$ ping raspberrypi.local
+</code></pre>
 
     </div>
 
@@ -378,7 +357,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-      2019-09-16
+      2019-09-17
       
     </span>
   </p>
@@ -395,27 +374,27 @@
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://youngsheldon.github.io/tags/helloword/">helloword</a>
+          <a href="https://youngsheldon.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/ssh%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE/">
+        
+          <a class="next" href="/post/helloword/">
+            <span class="next-text nav-default">你好，世界！</span>
+            <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
 </svg>
 
             </i>
-            <span class="prev-text nav-default">通过SD卡配置树莓派wifi，并通过ssh访问</span>
-            <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        
       </nav>
     </footer>
   </article>

@@ -6,7 +6,7 @@
     <description>Recent content on 欢迎来到sheldon的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Sep 2019 16:51:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2019 09:52:23 +0800</lastBuildDate>
     
         <atom:link href="https://youngsheldon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,39 @@
       <guid>https://youngsheldon.github.io/about/</guid>
       
         <description>&lt;p&gt;专注于cpp、go、python后台开发，业余开源硬件爱好者。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>通过SD卡配置树莓派wifi，并通过ssh访问</title>
+      <link>https://youngsheldon.github.io/post/ssh%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
+      <pubDate>Tue, 17 Sep 2019 09:52:23 +0800</pubDate>
+      
+      <guid>https://youngsheldon.github.io/post/ssh%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
+      
+        <description>&lt;p&gt;最近搬家，新房东的wifi是公用的，不是我自己拉网线开的路由器。当我想通过ssh访问树莓派的时候就出现了2个蛋疼的问题：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;树莓派怎么连上新wifi？&lt;/li&gt;
+&lt;li&gt;连上wifi后怎么获知树莓派的ip地址？&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;第一问题解决的办法其实非常简单，首先在SD卡的根目录下添加一个名为 wpa_supplicant.conf的文件，然后在该文件内添加以下的内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+network={
+  ssid=&amp;quot;你的WIFI名&amp;quot;
+  psk=&amp;quot;WIFI密码&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;插入SD卡启动树莓派就能直接连接到你的WIFI网络了。
+那问题来了，连上网后我们怎么看树莓派的IP呢？
+如果你的设备支持 mDNS的话可以用以下的指令来直接查看树莓派的地址：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ping raspberrypi.local
+&lt;/code&gt;&lt;/pre&gt;
 </description>
       
     </item>
